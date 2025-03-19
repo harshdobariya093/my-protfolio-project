@@ -1,0 +1,230 @@
+/* header{
+
+    height: 100vh;
+    padding-top: 7rem;
+    overflow: hidden;
+}
+
+.header__container{
+
+    text-align: center;
+    height: 100%;
+    position: relative;
+}
+
+.cta{
+
+    margin-top: 2.5rem;  
+    display: flex;
+    gap: 1.2rem;
+    justify-content: center;
+}
+
+.header__socials{
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.8rem;
+    position: absolute;
+    left: 0;
+    bottom: 3rem;
+}
+
+.header__socials::after{
+
+    content: "";
+    width: 1px;
+    height: 2rem;
+    background: var(--color-primary);   
+}
+
+.me{
+
+    background: linear-gradient(var(--color-primary), transparent);
+    width: 22rem;
+    height: 30rem;
+    position: absolute;
+    left: calc(50% - 11rem);
+    margin-top: 4rem;
+    border-radius: 12rem 12rem 0 0;
+    overflow: hidden;
+    padding: 5rem 1.5rem 1,5rem 1.5rem;
+}
+
+
+
+.scroll__down{
+
+    position: absolute;
+    right: -2.3rem;
+    bottom: 5rem;
+    transform: rotate(90deg);
+    font-weight: 300;
+    font-size: 0.9rem;
+}
+
+@media screen and (max-width: 1024px) {
+
+    header{
+
+        height: 60vh;
+    }
+
+}
+
+
+
+@media screen and (max-width: 600px) {
+
+    header{
+
+        height: 100vh;
+        padding-top: 4.3rem;
+    }
+
+    .header__socials, .scroll__down{
+
+        display: none;
+    }
+    .me{
+        width: 90%;
+        justify-content: center;
+    }
+
+    .me > img{
+
+        margin-top: 1rem;
+        
+    }
+}  */
+
+
+header {
+    height: 100vh;
+    padding-top: 7rem;
+    overflow: hidden;
+    padding-left: 2rem;  /* Left gap */
+    padding-right: 2rem; /* Right gap */
+}
+
+.header__container {
+    text-align: center;
+    height: 100%;
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto; /* Center the container */
+}
+
+.cta {
+    margin-top: 2.5rem;
+    display: flex;
+    gap: 1.2rem;
+    justify-content: center;
+}
+
+.header__socials {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.8rem;
+    position: absolute;
+    left: 2rem; /* Left alignment */
+    bottom: 3rem;
+}
+
+.header__socials::after {
+    content: "";
+    width: 1px;
+    height: 2rem;
+    background: var(--color-primary);
+}
+
+.me {
+    background: linear-gradient(var(--color-primary), transparent);
+    width: 22rem;
+    height: 30rem;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 4rem;
+    border-radius: 12rem 12rem 0 0;
+    overflow: hidden;
+    padding: 5rem 1.5rem 1.5rem 1.5rem;
+}
+
+.scroll__down {
+    position: absolute;
+    right: 2rem; /* Right alignment */
+    bottom: 5rem;
+    transform: rotate(90deg);
+    font-weight: 300;
+    font-size: 0.9rem;
+}
+
+/* Large Screens (1440px and above) */
+@media screen and (min-width: 1440px) {
+    .header__container {
+        max-width: 1400px;
+    }
+
+    .me {
+        width: 24rem;
+        height: 32rem;
+    }
+}
+
+/* Medium Screens (Tablets) */
+@media screen and (max-width: 1024px) {
+    header {
+        height: 70vh;
+    }
+
+    .me {
+        width: 18rem;
+        height: 26rem;
+    }
+}
+
+/* Small Devices (Phones) */
+@media screen and (max-width: 600px) {
+    header {
+        height: 100vh;
+        padding-top: 4.3rem;
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+
+    .header__socials, .scroll__down {
+        display: none;
+    }
+
+    .me {
+        width: 90%;
+        height: auto;
+        position: relative;
+        margin-top: 2rem;
+    }
+
+    .me > img {
+        margin-top: 1rem;
+        width: 100%;
+    }
+}
+
+/* Extra Small Devices (320px) */
+@media screen and (max-width: 320px) {
+    header {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    .me {
+        width: 100%;
+        margin-top: 2rem;
+    }
+
+    .me > img {
+        width: 100%;
+    }
+}

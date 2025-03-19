@@ -1,0 +1,138 @@
+.portfolio__container{
+
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 2.5rem;
+}
+
+.portfolio__item{
+
+    background: var(--color-bg-variant);
+    padding: 1.2rem;
+    border-radius: 2rem;
+    border: 1px solid transparent;
+    transition: var(--transition);
+
+}
+
+.portfolio__item:hover{
+
+    border-color: var(--color-primary-variant);
+    background: transparent;
+}
+
+.portfolio__item-image{
+
+    border-radius: 1.5rem;
+    overflow: hidden;
+}
+
+.portfolio__item h3{
+
+    margin: 1.2rem 0 .5rem;
+}
+
+.portfolio__item-cta{
+
+    display: flex;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    gap: 1rem;
+}
+
+/* Large Screens (Desktops & Large Laptops) */
+@media screen and (min-width: 1440px) {
+    .portfolio__container {
+        max-width: 100%;
+        margin: 0 auto;
+    }
+
+    .portfolio__item {
+        padding: 1.5rem;
+    }
+}
+
+/* Medium Devices (Tablets) */
+@media screen and (max-width: 1024px) {
+    .portfolio__container {
+        grid-template-columns: 1fr 1fr;
+        gap: 1.5rem;
+    }
+
+    .portfolio__item {
+        padding: 1.5rem;
+    }
+}
+
+/* Small Devices (Mobile Phones) */
+@media screen and (max-width: 768px) {
+    .portfolio__container {
+        grid-template-columns: 1fr;
+        gap: 1.2rem;
+    }
+
+    .portfolio__item {
+        padding: 1.2rem;
+    }
+}
+
+/* Extra Small Devices (large Mobile Screens) */
+@media screen and (max-width: 480px) {
+    .portfolio__container {
+        width: 95%;
+        margin-top: 3rem;
+        margin-bottom:none;
+    }
+
+    .portfolio__item {
+        padding: 1rem;
+    }
+
+    .portfolio__item-cta {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+
+/* Extra Small Devices (Small Mobile Screens) */
+@media screen and (max-width: 320px) {
+    .portfolio__container {
+        width: 100%;
+        grid-template-columns: 1fr; 
+        gap: 1rem; 
+        padding: 0 1rem;
+    }
+
+    .portfolio__item {
+        padding: 1rem;
+        text-align: center;
+        border-radius: 1.5rem;
+    }
+
+    .portfolio__item-image {
+        width: 100%;
+        height: auto;
+        border-radius: 1rem;
+        margin-bottom: 1rem; 
+    }
+
+    .portfolio__item h3 {
+        font-size: 1rem; 
+        margin: 0.8rem 0; 
+    }
+
+    .portfolio__item-cta {
+        display: flex;
+        flex-direction: column; 
+        align-items: center;
+        gap: 0.8rem;
+        margin-top: 1rem; 
+    }
+
+    .btn {
+        width: 100%; 
+        padding: 0.8rem;
+        font-size: 0.9rem;
+    }
+}
